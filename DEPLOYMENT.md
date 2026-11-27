@@ -20,12 +20,12 @@ _Cập nhật: 27/11/2026_
 | Backend / API | **Không cần.** Thanh toán, đăng nhập và "Đọc tiếp" hiện chỉ là giao diện mẫu (xem mục 5). |
 | Database | **Không cần** ở trạng thái hiện tại. |
 | Bí mật (API key, mật khẩu, token) | **Không có.** Đã quét `src/`, `index.html` và các file cấu hình. |
-| Dung lượng | Khoảng 50 MB, 305 file trong `dist/`. File lớn nhất khoảng 2,4 MB, dưới giới hạn 25 MiB/file của Cloudflare Pages. |
+| Dung lượng | Khoảng 50 MB, 305 file trong `dist/`. File lớn nhất khoảng 8,1 MB (PDF Hộp cách âm), dưới giới hạn 25 MiB/file của Cloudflare Pages. |
 | Tương thích Cloudflare Pages | ✅ Hoàn toàn tương thích. Đã build và kiểm thử trên trình duyệt (desktop 1440px, mobile 390px). |
 
 ### Vấn đề kỹ thuật đã biết
 1. **Tài liệu bán phí đang công khai.** PDF và ảnh từng trang nằm trong `public/docs/`, ai có link đều tải được. Giải pháp nằm ở mục 5.
-2. **`public/docs/hop-cach-am-va-fixture.pdf` là bản tạm** ghép từ ảnh, nên chữ không chọn hay tìm kiếm được. Cần thay bằng file gốc 8,4 MB, xem README mục 7.
+2. ~~PDF "Hộp cách âm" bản tạm~~ → đã thay bằng bản gốc (27/11/2026).
 3. Email và số điện thoại hiển thị dạng chữ thường, có thể bị bot thu thập để gửi spam. Đây là chấp nhận được với trang giới thiệu.
 
 ## 2. Kiến trúc triển khai

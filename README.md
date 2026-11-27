@@ -133,8 +133,7 @@ Giống bản Artifact, **toàn bộ 12 PDF và ảnh từng trang đều công 
 
 ## 7. Ghi chú về tài nguyên đã chuyển
 
-- `showroom.jpg`, 12 ảnh bìa, 11 file PDF và 23 ảnh trang của tài liệu *Hộp cách âm và fixture* được chép **nguyên bản** từ Artifact (đã đối chiếu SHA-256).
+- `showroom.jpg`, 12 ảnh bìa, cả 12 file PDF và 23 ảnh trang của tài liệu *Hộp cách âm và fixture* được chép **nguyên bản** từ Artifact (đã đối chiếu SHA-256).
 - Ảnh trang của 11 tài liệu còn lại được **xuất lại từ chính file PDF gốc** ở cùng kích thước 1000×1416. Sai khác trung bình so với ảnh cũ khoảng 0,8%, tức chỉ là nhiễu nén JPEG, mắt thường không phân biệt được.
-- **`public/docs/hop-cach-am-va-fixture.pdf` là bản tạm.** File gốc nặng 8,4 MB, vượt giới hạn của công cụ xuất nên không tải được. Bản tạm được ghép từ 23 ảnh trang gốc, đủ trang, đọc tốt, nhưng chữ dạng ảnh nên không bôi đen hay tìm kiếm được.
-  👉 **Hãy thay bằng file gốc:** mở Artifact, mở tài liệu *Hộp cách âm và fixture*, bấm "Mở bản PDF", tải file về rồi chép đè vào `public/docs/hop-cach-am-va-fixture.pdf` (giữ nguyên tên file).
+- `public/docs/hop-cach-am-va-fixture.pdf` là **bản gốc**, đã đối chiếu SHA-256 với file trên Artifact.
 - Font chữ (Cormorant Garamond, Be Vietnam Pro) tải từ Google Fonts, cần có Internet.
