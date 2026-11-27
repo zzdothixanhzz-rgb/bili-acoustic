@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bili Acoustic</title>
+<meta name="description" content="Tài liệu, khoá học và dịch vụ kỹ thuật đo kiểm âm thanh cho nhà máy điện tử: loa, micro, THD, Rub & Buzz, hộp cách âm, Gage R&R.">
+<meta name="theme-color" content="#0b0a09">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bili Acoustic · Thư viện kỹ thuật âm thanh">
+<meta property="og:description" content="Đo đúng, hiểu đúng và làm chủ chất lượng âm thanh trên chuyền.">
+<meta property="og:image" content="/showroom.jpg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Bili Acoustic, về đầu trang"><span class="seal">Bili</span><span class="brand-name"><b>BILI</b><small>ACOUSTIC</small></span></a>
+    <nav class="nav" id="nav" aria-label="Điều hướng chính">
+      <a href="#tai-lieu">Tài liệu</a>
+      <a href="#khoa-hoc">Khoá học</a>
+      <a href="#tin-tuc">Tin tức</a>
+      <a href="#dich-vu">Dịch vụ</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+    <div class="bar-right">
+      <label class="search" for="q">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Tìm tài liệu, khoá học…" autocomplete="off">
+      </label>
+      <button class="icon-btn" id="cartBtn" aria-label="Mở giỏ hàng">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 8h14l-1.2 11.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+        <span class="badge num" id="cartCount" hidden>0</span>
+      </button>
+      <button class="btn login-btn" id="loginBtn">Đăng nhập</button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false" aria-controls="nav">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="rail" aria-label="Chọn quầy"><div class="wrap" id="chips"></div></div>
+
+  <section class="hero" aria-label="Showroom Bili Acoustic: bấm vào từng quầy">
+    <div class="stage" id="stage">
+      <div class="scene">
+        <img src="/showroom.jpg" alt="Showroom Bili Acoustic: hai dãy tủ kính gỗ óc chó chứa tài liệu, loa và micro đo, cuối phòng là logo Bili Acoustic và quầy lễ tân" width="1800" height="900">
+        <svg viewBox="0 0 1800 900" preserveAspectRatio="none" id="hotspots"></svg>
+      </div>
+    </div>
+    <p class="hint">Bấm vào một quầy để xem tài liệu, hoặc chọn quầy trên thanh phía trên</p>
+  </section>
+
+  <section class="statement">
+    <div class="wrap">
+      <div class="orn caps"><i></i></div>
+      <p class="caps" style="color:var(--gold)">Thư viện kỹ thuật âm thanh</p>
+      <h1>Đo đúng, hiểu đúng và <em>làm chủ chất lượng âm thanh</em> trên chuyền</h1>
+      <p class="lede">Tài liệu và khoá học về đo kiểm loa, micro, THD, Rub &amp; Buzz, hộp cách âm và phân tích dữ liệu đo. Viết từ kinh nghiệm vận hành trạm đo thật, kèm file mẫu để áp dụng ngay.</p>
+      <div class="ctas"><a class="btn" href="#tai-lieu">Xem tài liệu</a><a class="btn line" href="#khoa-hoc">Lịch khoá học</a></div>
+      <div class="marks"><span>Kèm file Excel và dữ liệu mẫu</span><span>Cập nhật miễn phí</span><span>Xuất hoá đơn VAT</span></div>
+    </div>
+  </section>
+
+  <section class="band alt" id="tai-lieu">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="orn"><i></i></div>
+        <p class="caps">Tài liệu đang bán</p>
+        <h2>Bộ sưu tập tài liệu</h2>
+        <p>Bản PDF đọc ngay sau khi thanh toán. Khi tài liệu có phiên bản mới, bạn nhận bản cập nhật miễn phí.</p>
+        <p class="status" id="docStatus" aria-live="polite"></p>
+      </div>
+      <div class="grid" id="docGrid"></div>
+    </div>
+  </section>
+
+  <section class="band" id="khoa-hoc">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="orn"><i></i></div>
+        <p class="caps">Khoá học</p>
+        <h2>Lịch khai giảng</h2>
+        <p>Lớp nhỏ, thực hành trên thiết bị đo và dữ liệu của chính học viên. Khoá đã kết thúc vẫn có tư liệu để tham khảo.</p>
+      </div>
+      <div class="courses" id="courseGrid"></div>
+    </div>
+  </section>
+
+  <section class="band alt" id="tin-tuc">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="orn"><i></i></div>
+        <p class="caps">Cập nhật kiến thức</p>
+        <h2>Tin tức &amp; ghi chép</h2>
+      </div>
+      <div class="news" id="newsList"></div>
+    </div>
+  </section>
+
+  <section class="band" id="dich-vu">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="orn"><i></i></div>
+        <p class="caps">Dịch vụ kỹ thuật</p>
+        <h2>Một đầu mối cho cả trạm đo</h2>
+        <p>Người viết tài liệu cũng là người đứng máy đo cùng bạn, từ lúc khảo sát tới khi bàn giao cho người vận hành.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="r">I.</span><h3>Khảo sát trạm đo</h3><p>Xem cấu hình, hộp cách âm, fixture, giới hạn test và lịch sử lỗi. Chỉ ra chỗ làm kết quả dao động.</p></div>
+        <div class="step"><span class="r">II.</span><h3>Đánh giá hệ đo</h3><p>Hiệu chuẩn chuỗi đo, đo nhiễu nền, chạy Gage R&amp;R trên đường đáp tuyến để biết hệ đo tin cậy tới đâu.</p></div>
+        <div class="step"><span class="r">III.</span><h3>Cải tiến</h3><p>Chỉnh fixture, vị trí micro, đặt lại giới hạn theo golden sample. So sánh tỉ lệ lỗi giả trước và sau.</p></div>
+        <div class="step"><span class="r">IV.</span><h3>Bàn giao &amp; đào tạo</h3><p>Bàn giao file cấu hình, quy trình kiểm tra hằng ngày và hướng dẫn trực tiếp cho người vận hành.</p></div>
+      </div>
+      <div class="ctas" style="margin-top:36px"><a class="btn line" href="#lien-he">Đặt lịch khảo sát</a></div>
+    </div>
+  </section>
+</main>
+
+<footer id="lien-he">
+  <div class="wrap">
+    <div class="about">
+      <a class="brand" href="#top"><span class="seal">Bili</span><span class="brand-name"><b>BILI</b><small>ACOUSTIC</small></span></a>
+      <p>Tài liệu, khoá học và dịch vụ kỹ thuật đo kiểm âm thanh cho nhà máy điện tử.</p>
+    </div>
+    <div>
+      <h4>Liên kết</h4>
+      <ul><li><a href="#tai-lieu">Tài liệu</a></li><li><a href="#khoa-hoc">Khoá học</a></li><li><a href="#tin-tuc">Tin tức</a></li><li><a href="#dich-vu">Dịch vụ</a></li></ul>
+    </div>
+    <div>
+      <h4>Liên hệ</h4>
+      <ul><li><span class="ph">zzdothixanhzz@gmail.com</span></li><li><span class="ph">0328 225 886</span></li><li>Bắc Ninh, Việt Nam</li></ul>
+    </div>
+    <div>
+      <h4>Chính sách</h4>
+      <ul><li>Cập nhật tài liệu miễn phí</li><li>Hoàn tiền trong 7 ngày nếu file lỗi</li><li>Xuất hoá đơn VAT</li></ul>
+    </div>
+    <div>
+      <h4>Cách mua</h4>
+      <ol><li>Chọn tài liệu cần mua</li><li>Bấm "Thêm vào giỏ"</li><li>Mở giỏ, bấm "Thanh toán"</li><li>Chuyển khoản theo mã QR</li></ol>
+    </div>
+  </div>
+  <div class="legal"><div class="wrap"><span>© 2026 Bili Acoustic · Hotline 0328 225 886</span><a href="#top" style="color:inherit">Lên đầu trang ↑</a></div></div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-label="Giỏ hàng">
+  <header><h2>Giỏ hàng</h2><button class="icon-btn" id="closeCart" aria-label="Đóng giỏ hàng">✕</button></header>
+  <div class="cart-list" id="cartList"></div>
+  <div class="total"><span class="caps" style="color:var(--stone)">Tạm tính</span><span class="price num" id="cartTotal">0₫</span></div>
+  <button class="btn" id="checkout">Thanh toán</button>
+  <p class="note" id="checkoutNote" hidden>Đây là trang mẫu nên chưa nối cổng thanh toán. Khi làm thật, bước này sẽ tạo mã đơn và mã QR chuyển khoản.</p>
+</aside>
+
+<button class="fab" id="fab" aria-label="Cần tư vấn trực tiếp?" aria-expanded="false">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v11H9l-5 4z"/></svg>
+</button>
+<div class="chatbox" id="chatbox" hidden>
+  <h3>Cần tư vấn trực tiếp?</h3>
+  <p>Nhắn hoặc gọi, bên mình trả lời trong giờ làm việc.</p>
+  <div class="ln"><span>Zalo</span><span class="ph">0328 225 886</span></div>
+  <div class="ln"><span>Email</span><span class="ph">zzdothixanhzz@gmail.com</span></div>
+</div>
+<div class="tip" id="tip" hidden></div>
+<div class="toast" id="toast" role="status" hidden></div>
+<div class="reader" id="reader" hidden role="dialog" aria-modal="true" aria-labelledby="rdTitle">
+  <div class="rd-bar">
+    <div class="rd-t"><span class="caps">Đang đọc</span><h2 id="rdTitle"></h2></div>
+    <span class="rd-count num" id="rdCount"></span>
+    <a class="btn sm line rd-pdf" id="rdPdf" href="#" target="_blank" rel="noopener">Mở bản PDF</a>
+    <button class="icon-btn" id="rdClose" aria-label="Đóng tài liệu">✕</button>
+  </div>
+  <div class="rd-pages" id="rdPages"></div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

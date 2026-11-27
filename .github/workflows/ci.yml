@@ -1,0 +1,29 @@
+# Kiểm tra build cho mọi push và Pull Request.
+# Workflow này KHÔNG deploy. Cloudflare Pages tự build và deploy qua GitHub integration.
+# Nếu CI báo đỏ trên một PR, đừng merge PR đó vào main.
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Không có secret trong bản build
+        run: |
+          if grep -rIiE "(api[_-]?key|secret|password|sk-ant|ghp_)[\"' :=]+[A-Za-z0-9_\-]{12,}" dist src index.html; then
+            echo "::error::Có chuỗi giống secret trong mã nguồn/bản build"; exit 1
+          fi

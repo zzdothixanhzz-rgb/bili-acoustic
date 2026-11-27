@@ -1,0 +1,19 @@
+{
+  "name": "bili-acoustic",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Bili Acoustic — tài liệu, khoá học và dịch vụ đo kiểm âm thanh",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/check-assets.mjs && vite build",
+    "preview": "vite preview",
+    "check": "node scripts/check-assets.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "vite": "^6.4.6"
+  }
+}
