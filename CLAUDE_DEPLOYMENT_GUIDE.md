@@ -8,9 +8,9 @@
 | Mục | Giá trị |
 |---|---|
 | Tên | Bili Acoustic — tài liệu, khoá học, dịch vụ đo kiểm âm thanh |
-| GitHub repo | `TODO: https://github.com/<tai-khoan>/bili-acoustic` |
-| Production URL | `TODO: https://<du-an>.pages.dev` |
-| Preview URL | `https://<ten-nhanh>.<du-an>.pages.dev` (tự sinh cho mỗi nhánh/PR) |
+| GitHub repo | https://github.com/zzdothixanhzz-rgb/bili-acoustic (private) |
+| Production URL | https://bili-acoustic.pages.dev |
+| Preview URL | `https://<ten-nhanh>.bili-acoustic.pages.dev` (tự sinh cho mỗi nhánh/PR) |
 | Hosting | Cloudflare Pages (gói Free), kết nối GitHub |
 | Nhánh production | `main` |
 | Backend / API | Không có |
