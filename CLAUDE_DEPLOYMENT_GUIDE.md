@@ -9,7 +9,7 @@
 |---|---|
 | Tên | Bili Acoustic — tài liệu, khoá học, dịch vụ đo kiểm âm thanh |
 | GitHub repo | https://github.com/zzdothixanhzz-rgb/bili-acoustic (private) |
-| Production URL | `TODO: https://bili-acoustic.<tai-khoan>.workers.dev` (xem Cloudflare → Workers & Pages → bili-acoustic → Settings → Domains & Routes) |
+| Production URL | https://bili-acoustic.zzdothixanhzz.workers.dev |
 | Preview URL | Bật trong Settings → Builds → *Non-production branch builds* (mỗi nhánh có một preview URL) |
 | Hosting | Cloudflare **Workers static assets** (gói Free), kết nối GitHub qua Workers Builds. Cấu hình trong `wrangler.jsonc` |
 | Nhánh production | `main` |

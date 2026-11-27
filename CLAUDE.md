@@ -1,6 +1,7 @@
 # CLAUDE.md — Bili Acoustic website
 
-Website tĩnh (HTML/CSS/JS thuần + Vite 6, Node 22), deploy lên **Cloudflare Workers (static assets)** qua GitHub (Workers Builds). Cấu hình nằm trong `wrangler.jsonc`. Hướng dẫn đầy đủ: `CLAUDE_DEPLOYMENT_GUIDE.md`.
+Website tĩnh (HTML/CSS/JS thuần + Vite 6, Node 22), deploy lên **Cloudflare Workers (static assets)** qua GitHub (Workers Builds). Cấu hình nằm trong `wrangler.jsonc`.
+Production: https://bili-acoustic.zzdothixanhzz.workers.dev · Repo: https://github.com/zzdothixanhzz-rgb/bili-acoustic Hướng dẫn đầy đủ: `CLAUDE_DEPLOYMENT_GUIDE.md`.
 
 ## Mỗi lần làm việc
 1. `git pull origin main` trước khi sửa.
