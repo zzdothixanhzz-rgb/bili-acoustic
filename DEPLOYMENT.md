@@ -1,5 +1,7 @@
 # DEPLOYMENT.md — Báo cáo kiểm tra & hạ tầng triển khai
 
+> **Cập nhật:** dự án được triển khai bằng **Cloudflare Workers (static assets)** qua Workers Builds, không dùng Cloudflare Pages. Cấu hình nằm trong `wrangler.jsonc` (phục vụ `dist/`). Build `npm run build`, deploy `npx wrangler deploy`, URL dạng `bili-acoustic.<tai-khoan>.workers.dev`. Giới hạn Free: 20.000 file và 25 MiB mỗi file. Các mục bên dưới nhắc tới Pages vẫn đúng về nguyên tắc (build, rollback, chi phí 0 đ).
+
 _Cập nhật: 27/11/2026_
 
 ## 1. Kết quả kiểm tra dự án (Phase 1 — Audit)

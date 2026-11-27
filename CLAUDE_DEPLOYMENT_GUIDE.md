@@ -9,9 +9,9 @@
 |---|---|
 | Tên | Bili Acoustic — tài liệu, khoá học, dịch vụ đo kiểm âm thanh |
 | GitHub repo | https://github.com/zzdothixanhzz-rgb/bili-acoustic (private) |
-| Production URL | https://bili-acoustic.pages.dev |
-| Preview URL | `https://<ten-nhanh>.bili-acoustic.pages.dev` (tự sinh cho mỗi nhánh/PR) |
-| Hosting | Cloudflare Pages (gói Free), kết nối GitHub |
+| Production URL | `TODO: https://bili-acoustic.<tai-khoan>.workers.dev` (xem Cloudflare → Workers & Pages → bili-acoustic → Settings → Domains & Routes) |
+| Preview URL | Bật trong Settings → Builds → *Non-production branch builds* (mỗi nhánh có một preview URL) |
+| Hosting | Cloudflare **Workers static assets** (gói Free), kết nối GitHub qua Workers Builds. Cấu hình trong `wrangler.jsonc` |
 | Nhánh production | `main` |
 | Backend / API | Không có |
 | Database | Không có |
@@ -41,10 +41,12 @@ npm run preview      # xem dist tại http://localhost:4173
 
 Trên Windows (PowerShell) dùng đúng các lệnh trên. Nếu `npm` bị chặn bởi ExecutionPolicy thì gọi `npm.cmd`.
 
-## 4. Cấu hình Cloudflare Pages
+## 4. Cấu hình Cloudflare (Workers Builds)
 
-Build command `npm run build` · Output `dist` · Root trống · Production branch `main` · Preview: bật cho mọi nhánh.
-Build lỗi thì Cloudflare giữ nguyên bản production cũ.
+Build command `npm run build` · Deploy command `npx wrangler deploy` · Root trống · Production branch `main`.
+`wrangler.jsonc` chỉ định `assets.directory = ./dist` (không có Worker script). `public/_headers` vẫn có hiệu lực.
+Build lỗi thì bước deploy không chạy, nên bản đang chạy giữ nguyên.
+Giới hạn Free: 20.000 file và 25 MiB mỗi file.
 
 ## 5. Quy trình Git khi thay đổi (bắt buộc)
 
@@ -85,7 +87,7 @@ Build lỗi thì Cloudflare giữ nguyên bản production cũ.
 
 ## 8. Rollback
 
-Dashboard Cloudflare → dự án → Deployments → bản cũ → **⋯ → Rollback**. Sau đó `git revert <commit>` rồi push để mã nguồn khớp. Chi tiết xem `DEPLOYMENT.md` mục 4.
+Dashboard Cloudflare → Workers & Pages → bili-acoustic → **Deployments** → chọn version cũ → **Rollback**. Sau đó `git revert <commit>` rồi push để mã nguồn khớp. Chi tiết xem `DEPLOYMENT.md` mục 4.
 
 ## 9. Quy tắc bất biến
 

@@ -1,0 +1,11 @@
+// Cấu hình Cloudflare Workers (static assets).
+// Cloudflare chạy: npm run build → npx wrangler deploy
+// Website là trang tĩnh, nên không có Worker script ("main"). Cloudflare phục vụ thẳng thư mục dist/.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "bili-acoustic",
+  "compatibility_date": "2026-11-26",
+  "assets": {
+    "directory": "./dist"
+  }
+}
